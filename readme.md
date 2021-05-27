@@ -46,9 +46,9 @@ e.g. 1700, 1800, 1900, 2009, 2010 and 2011
 
 ##### TDD
 
-    input    |    output    
--------------|-------------
-    2000     |    true     
-    1700     |    false   
-    2008     |    true     
-    2009     |    false   
+tested? |    input    |    output    
+--------|-------------|-------------
+  n     |   2000      |    true     
+  n     |   1700      |    false   
+  n     |   2008      |    true     
+  n     |   2009      |    false   
