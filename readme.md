@@ -48,7 +48,7 @@ e.g. 1700, 1800, 1900, 2009, 2010 and 2011
 
 tested? |    input    |    output    
 --------|-------------|-------------
-  n     |   2000      |    true     
-  n     |   1700      |    false   
+  y     |   2000      |    true     
+  y     |   1700      |    false   
   n     |   2008      |    true     
   n     |   2009      |    false   
