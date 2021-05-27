@@ -1,5 +1,7 @@
 ### Leap Years
 
+##### Requirements:
+
 A simple tool that will tell you whether a year is a leap year, according to the following rules:
 
 • All years divisible by 400 ARE leap years (e.g. 2000 was a leap year)  
@@ -25,3 +27,28 @@ Extension Options
 • Write a program that takes a start year and an end year and returns an array of all the leap years between.  
 
 • Write a program that when given a year, will return the closest leap year (this could be before or after the given year)  
+
+---
+
+#### Planning:
+
+```
+Leap Years:
+• divisible by 400, 4
+• not divisible by 100
+e.g. 2000, 2004, 2008 and 2012
+
+Not Leap Years:
+• divisible by 100
+• not divisible by 400, 4
+e.g. 1700, 1800, 1900, 2009, 2010 and 2011
+```
+
+##### TDD
+
+    input    |    output    
+-------------|-------------
+    2000     |    true     
+    1970     |    false   
+    2008     |    true     
+    2009     |    false   
