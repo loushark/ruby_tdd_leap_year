@@ -19,29 +19,33 @@ class LeapYear
   end
 
   def closest_leap_year(year)
-    future_num = 0
-    past_num = 0
 
-    until is_a_leap_year?(year)
-      future_num+=1
-      year+=1
+    past_year = closest_past_leap_year(year)
+    future_year = closest_future_leap_year(year)
+
+
+    if year - past_year < future_year - year
+      past_year
+    elsif future_year - year < year - past_year
+      future_year
+    elsif year - past_year == future_year - year
+      [past_year, future_year]
     end
-    year -= future_num
+  end
 
+  private
+
+  def closest_past_leap_year(year)
     until is_a_leap_year?(year)
-      past_num+=1
       year-=1
     end
-    year += past_num
+    year
+  end
 
-    if past_num < future_num
-      year -= past_num
-    elsif past_num > future_num
-      year += future_num
-    elsif past_num == future_num
-      arr = [year -= past_num]
-      year += past_num
-      arr << year += future_num
+  def closest_future_leap_year(year)
+    until is_a_leap_year?(year)
+      year+=1
     end
+    year
   end
 end
