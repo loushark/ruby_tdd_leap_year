@@ -40,5 +40,19 @@ describe LeapYear do
       output = [2000, 2004, 2008]
       expect(test_leapYear.list_leap_years(input1, input2)).to eq output
     end
+
+    it 'returns an array of six leap years between the years 2000 and 2020' do
+      input1 = 2000
+      input2 = 2020
+      output = [2000, 2004, 2008, 2012, 2016, 2020]
+      expect(test_leapYear.list_leap_years(input1, input2)).to eq output
+    end
+
+    it 'returns an array of leap years between the years 1950 and 2000' do
+      input1 = 1950
+      input2 = 2020
+      output = [1952, 1956, 1960, 1964, 1968, 1972, 1976, 1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020]
+      expect(test_leapYear.list_leap_years(input1, input2)).to eq output
+    end
   end
 end
