@@ -19,6 +19,25 @@ class LeapYear
   end
 
   def closest_leap_year(year)
-    2000
+    future_num = 0
+    past_num = 0
+
+    until is_a_leap_year?(year)
+      future_num+=1
+      year+=1
+    end
+    year -= future_num
+
+    until is_a_leap_year?(year)
+      past_num+=1
+      year-=1
+    end
+    year += past_num
+
+    if past_num < future_num
+      return year -= past_num
+    else
+      return year += future_num
+    end
   end
 end

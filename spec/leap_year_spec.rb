@@ -62,5 +62,11 @@ describe LeapYear do
       output = 2000
       expect(test_leapYear.closest_leap_year(input)).to eq output
     end
+
+    it 'returns the closest leap year when the closest leap year is in the future' do
+      input = 2007
+      output = 2008
+      expect(test_leapYear.closest_leap_year(input)).to eq output
+    end
   end
 end
