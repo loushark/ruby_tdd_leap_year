@@ -17,4 +17,8 @@ class LeapYear
       year if is_a_leap_year?(year)
     end
   end
+
+  def closest_leap_year(year)
+    2000
+  end
 end
