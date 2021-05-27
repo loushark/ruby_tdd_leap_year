@@ -68,5 +68,11 @@ describe LeapYear do
       output = 2008
       expect(test_leapYear.closest_leap_year(input)).to eq output
     end
+
+    it 'returns the two closest leap years when the input year is equal number of years away from closest leap year' do
+      input = 2010
+      output = 2008, 2012
+      expect(test_leapYear.closest_leap_year(input)).to eq output
+    end
   end
 end

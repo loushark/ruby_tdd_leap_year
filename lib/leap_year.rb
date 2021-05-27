@@ -35,9 +35,13 @@ class LeapYear
     year += past_num
 
     if past_num < future_num
-      return year -= past_num
-    else
-      return year += future_num
+      year -= past_num
+    elsif past_num > future_num
+      year += future_num
+    elsif past_num == future_num
+      arr = [year -= past_num]
+      year += past_num
+      arr << year += future_num
     end
   end
 end
