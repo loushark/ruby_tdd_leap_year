@@ -23,5 +23,11 @@ describe LeapYear do
       output = false
       expect(test_leapYear.is_a_leap_year?(input)).to eq output
     end
+
+    it 'returns false when a non leap year is added' do
+      input = 2009
+      output = false
+      expect(test_leapYear.is_a_leap_year?(input)).to eq output
+    end
   end
 end

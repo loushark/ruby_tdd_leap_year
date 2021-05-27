@@ -40,8 +40,11 @@ e.g. 2000, 2004, 2008 and 2012
 
 Not Leap Years:
 • divisible by 100
-• not divisible by 400, 4
-e.g. 1700, 1800, 1900, 2009, 2010 and 2011
+• not divisible by 400
+e.g. 1700, 1800, 1900
+
+• not divisible by 4
+e.g. 2009, 2010 and 2011
 ```
 
 ##### TDD
@@ -50,5 +53,5 @@ tested? |    input    |    output
 --------|-------------|-------------
   y     |   2000      |    true     
   y     |   1700      |    false   
-  n     |   2008      |    true     
+  y     |   2008      |    true     
   n     |   2009      |    false   
